@@ -3,7 +3,7 @@ Coming soon ...
 
 This is PyTorch implementation of our ICCV 2019 paper "Cross-X Learning for Fine-Grained Visual Categorization". We experimented on 5 fine-grained benchmark datasets --- NABirds, CUB-200-2011, Stanford Cars, Stanford Dogs, and VGG-Aircraft. A "x-imdb.py" is provided for each dataset to generate Python pickle files, which are then used to prepare train/val/trainval/test data.
 
---- demo.py is used to train your own CrossX model.
+--- demo.py is used to train your own CrossX model from scratch.
 
 --- prediction.py outputs classification accuracy by employing pretrained CrossX models.   
 
