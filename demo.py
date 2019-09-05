@@ -13,8 +13,8 @@ import torch.utils.model_zoo as model_zoo
 from utils import imdb #, myimagefolder, mydataloader
 progpath = os.path.dirname(os.path.realpath(__file__))          # /home/luowei/Codes/feasc-msc
 sys.path.append(progpath)
-import lwmodellearning
-from lwinitialization import init_crossx_params, data_transform
+import modellearning
+from initialization import init_crossx_params, data_transform
 
 
 
@@ -61,17 +61,17 @@ else:
 
 if backbone is 'senet':
     if datasetname in ['cubbirds', 'nabirds']:
-        import lwcrossxsenetmix as crossxmodel
+        import crossxsenetmix as crossxmodel
         model = crossxmodel.senet50(num_classes=num_classes, nparts=nparts)
     else:
-        import lwcrossxsenetavg as crossxmodel
+        import crossxsenetavg as crossxmodel
         model = crossxmodel.senet50(num_classes=num_classes, nparts=nparts)
 elif backbone is 'resnet':
     if datasetname in ['cubbirds', 'nabirds']:
-        import lwcrossxresnetmix as crossxmodel
+        import crossxresnetmix as crossxmodel
         model = crossxmodel.resnet50(pretrained=True, modelpath=modelzoopath, num_classes=num_classes,  nparts=nparts)
     else:
-        import lwcrossxresnetavg as crossxmodel
+        import crossxresnetavg as crossxmodel
         model = crossxmodel.resnet50(pretrained=True, modelpath=modelzoopath, num_classes=num_classes,  nparts=nparts)
 
 
@@ -114,7 +114,7 @@ isckpt = False  # True for restoring model from checking point
 # print parameters
 print("{}: {}, gamma: {}_{}_{}, nparts: {}, epochs: {}".format(optmeth, lr, gamma1, gamma2, gamma3, nparts, epochs))
 
-model, train_rsltparams = lwmodellearning.train(model, dataloader, criterion, optimizer, scheduler, datasetname=datasetname, isckpt=isckpt, epochs=epochs)
+model, train_rsltparams = modellearning.train(model, dataloader, criterion, optimizer, scheduler, datasetname=datasetname, isckpt=isckpt, epochs=epochs)
 
 
 #### save model
@@ -122,7 +122,7 @@ modelpath = './models'
 if backbone is 'senet':
     modelname = r"{}_parts{}-sc{}_{}_{}-{}{}-SeNet50-crossx.model".format(datasetname, nparts, gamma1, gamma2, gamma3, optmeth, lr)
 else:
-    modelname = r"lw{}_parts{}-sc{}_{}_{}-{}{}-ResNet50-crossx.model".format(datasetname, nparts, gamma1, gamma2, gamma3, optmeth, lr)
+    modelname = r"{}_parts{}-sc{}_{}_{}-{}{}-ResNet50-crossx.model".format(datasetname, nparts, gamma1, gamma2, gamma3, optmeth, lr)
 torch.save(model.state_dict(), os.path.join(modelpath, modelname))
 
 
