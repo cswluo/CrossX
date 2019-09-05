@@ -289,22 +289,22 @@ class SeNet(nn.Module):
 
 
 ########################################## Models
-def senet50(num_classes=200, **kwargs):
+def senet50(num_classes=200, nparts=1, **kwargs):
     
-    if kwargs['nparts'] > 1:
+    if nparts > 1:
         # resnet with osme
         kwargs.setdefault('meflag', True)
     else:
         # the normal resnet
         kwargs.setdefault('meflag', False)
 
+    
     rd = [16, 32, 64, 128]
 
-    if meflag:
+    if kwargs['meflag']:
         model = SeNet(SEBottleneck, [3, 4, 6, 3], num_classes=num_classes, rd=rd, nparts=nparts, meflag=True)
     else:
         # vanilla senet
-        nparts = 1
         model = SeNet(SEBottleneck, [3, 4, 6, 3], num_classes=num_classes, rd=rd, nparts=nparts, meflag=False)
     
     return model
