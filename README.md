@@ -5,7 +5,7 @@ This is PyTorch implementation of our ICCV 2019 paper "Cross-X Learning for Fine
 
 ## Appoach
 
-![Image of crossx] (https://github.com/cswluo/CrossX/blob/crossx/crossx.png)
+![Image of crossx]  (https://github.com/cswluo/CrossX/blob/crossx/crossx.png)
 
 ## Implementation
 
