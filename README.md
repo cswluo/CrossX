@@ -17,7 +17,7 @@ A "x-imdb.py" is provided for each dataset to generate Python pickle files, whic
 
 Due to the random generation of train/val/test data on some datasets, the classification accuracy may have a bit fluctuation but it should be in a reasonable range.
 
-The pretrained CrossX models can be download from [HERE](https://pan.baidu.com/s/1803G5v0KDU0B_NS62Ril3A). If you plan to train your own CrossX model from scratch by using the SENet backbone, you should download the pretrained SENet-50 weights from [HERE](https://pan.baidu.com/s/1k6NaffqmbakH9Vng-CLxlg).
+The pretrained CrossX models can be download from [HERE](https://pan.baidu.com/s/1803G5v0KDU0B_NS62Ril3A). If you plan to train your own CrossX model from scratch by using the SENet backbone, you need to download the pretrained SENet-50 weights from [HERE](https://pan.baidu.com/s/1k6NaffqmbakH9Vng-CLxlg).
 
 ## Results
 
