@@ -114,7 +114,7 @@ isckpt = False  # True for restoring model from checking point
 # print parameters
 print("{}: {}, gamma: {}_{}_{}, nparts: {}, epochs: {}".format(optmeth, lr, gamma1, gamma2, gamma3, nparts, epochs))
 
-model, train_rsltparams = modellearning.train(model, dataloader, criterion, optimizer, scheduler, datasetname=datasetname, isckpt=isckpt, epochs=epochs)
+model, train_rsltparams = modellearning.train(model, dataloader, criterion, optimizer, scheduler, backbone=backbone, datasetname=datasetname, isckpt=isckpt, epochs=epochs)
 
 
 #### save model
