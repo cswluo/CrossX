@@ -9,6 +9,8 @@ This is PyTorch implementation of our ICCV 2019 paper "Cross-X Learning for Fine
 
 ## Implementation
 
+Our implementation is based on PyTorch(>1.0), CUDA 9.0, and Python 3.5.
+
 A "x-imdb.py" is provided for each dataset to generate Python pickle files, which are then used to prepare train/val/trainval/test data. Run "x-imdb.py" in the folder of your dataset to generate corresponding pickle file (imdb.pkl) should be the very first step.
 
 - demo.py is used to train your own CrossX model from scratch.
