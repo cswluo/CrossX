@@ -1,6 +1,6 @@
 # CrossX
 
-This is PyTorch implementation of our ICCV 2019 paper "Cross-X Learning for Fine-Grained Visual Categorization". We experimented on 5 fine-grained benchmark datasets --- NABirds, CUB-200-2011, Stanford Cars, Stanford Dogs, and VGG-Aircraft. You should first download these datasets from their project homepages before runing CrossX.
+This is PyTorch implementation of our ICCV 2019 paper ["Cross-X Learning for Fine-Grained Visual Categorization"](https://arxiv.org/abs/1909.04412). We experimented on 5 fine-grained benchmark datasets --- NABirds, CUB-200-2011, Stanford Cars, Stanford Dogs, and VGG-Aircraft. You should first download these datasets from their project homepages before runing CrossX.
 
 
 ## Appoach
