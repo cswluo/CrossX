@@ -37,7 +37,7 @@ The pretrained CrossX models can be download from [HERE](https://pan.baidu.com/s
 If you use CrossX in your research, please cite the paper:
 ```
 @inproceedings{luowei@19iccv,
-author = {Wei Luo and Xitong Yang and Xianjie Mo and Yuheng Lu and Larry S. Davis and Ser-Nam Lin},
+author = {Wei Luo and Xitong Yang and Xianjie Mo and Yuheng Lu and Larry S. Davis and Ser-Nam Lim},
 title = {Cross-X learning for fine-grained visual categorization},
 booktitle = {ICCV},
 year = {2019},
